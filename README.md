@@ -1,1 +1,1 @@
-# react-ui-library
+# react-component-ui-library
