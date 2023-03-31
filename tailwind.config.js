@@ -28,12 +28,6 @@ module.exports = {
           'base-35': 'rgb(var(--color-blue-base-35))',
           light: 'rgb(var(--color-blue-light))',
         },
-        neutrals: {
-          white: 'rgb(var(--color-neutrals-white))',
-          dark: 'rgb(var(--color-neutrals-dark))',
-          'dark-75': 'rgb(var(--color-neutrals-dark-75))',
-          dark15: 'rgb(var(---color-neutrals-dark-15))',
-        },
       },
     },
   },

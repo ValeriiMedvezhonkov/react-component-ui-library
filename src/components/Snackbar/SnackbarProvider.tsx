@@ -39,7 +39,7 @@ export const SnackbarProvider = ({ children }: SnackbarProviderProp) => {
   const [message, setMessage] = useState<string>('')
   const [position, setPosition] = useState<SnackbarPosition>(defaultPosition)
   const [type, setType] = useState<AlertBaseType>(defaultType)
-  const [content, setContent] = useState<string | undefined>()
+  const [content, setContent] = useState<string>('')
   const [filled, setFilled] = useState<boolean>(false)
   const [outlined, setOutlined] = useState<boolean>(false)
   const [className, setClassName] = useState<string>('')
@@ -57,12 +57,12 @@ export const SnackbarProvider = ({ children }: SnackbarProviderProp) => {
     className = '',
   }: ShowSnackbarProps) => {
     setMessage(message)
-    setType(type)
-    setPosition(position)
-    setContent(content)
-    setFilled(filled)
-    setOutlined(outlined)
-    setClassName(className)
+    setType(type ?? defaultType)
+    setPosition(position ?? defaultPosition)
+    setContent(content ?? '')
+    setFilled(filled ?? false)
+    setOutlined(outlined ?? false)
+    setClassName(className ?? '')
     setTimeout(() => {
       setIsVisible(true)
     }, 100)
@@ -135,13 +135,9 @@ export const SnackbarProvider = ({ children }: SnackbarProviderProp) => {
             'opacity-100 ': isVisible,
 
             'opacity-0 -translate-y-full':
-              !isVisible &&
-              (position === 'top-left' || position === 'top-center' || position === 'top-right'),
+              !isVisible && (position === 'top-left' || position === 'top-center' || position === 'top-right'),
             'opacity-0 translate-y-full':
-              !isVisible &&
-              (position === 'bottom-left' ||
-                position === 'bottom-center' ||
-                position === 'bottom-right'),
+              !isVisible && (position === 'bottom-left' || position === 'bottom-center' || position === 'bottom-right'),
           },
         )}
       >

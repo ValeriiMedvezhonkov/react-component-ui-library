@@ -27,9 +27,4 @@
     --color-green-base: 132, 214, 90; /*#84D65A*/
     --color-green-base-35: rgba(132, 214, 90, 0.35); /*#84D65A with 0.35 opacity*/
     --color-green-light: 237, 251, 216; /*#edfbd8*/
-
-    --color-neutrals-white: 255, 255, 255; /*#FFFFFF*/
-    --color-neutrals-dark: 57, 58, 55; /*#393A37*/
-    --color-neutrals-dark-75: rgba(57, 58, 55, 0.75); /*#393A37 with 0.75 opacity*/
-    --color-neutrals-dark-15: rgba(57, 58, 55, 0.15); /*#393A37 with 0.15 opacity*/
 }
